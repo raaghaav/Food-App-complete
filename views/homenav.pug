@@ -1,0 +1,34 @@
+// homenav contains header(background) + navbar 
+header
+    .showcase
+        nav
+            ul.nav-ul
+                li.nav-li
+                    a.nav-links(href='#') Features
+                li.nav-li
+                    a.nav-links(href='#') Details
+                li.nav-li
+                    a.nav-links(href='#') Reviews
+                li.nav-li
+                    a.nav-links(href='/plans') Plans
+
+                if name 
+                    li.nav-li
+                        a.nav-links(href="/profile") #{name}
+                    li.nav-li
+                        a.nav-links(href="javascript:;").logout logout
+                else
+                    li.nav-li
+                        a.nav-links(href='/login') LogIn
+
+                
+               
+        .text-box
+            h1.main-heading
+                | MEALS PLANS. 
+                br
+                |  FOR 
+                span#span-detector.span-styler EVERYONE
+            .btn-container
+                a.btn.btn-full(href='#') Book Now
+                a.btn.btn-empty(href='#') Show Me More
