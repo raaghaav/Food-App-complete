@@ -5,15 +5,18 @@ const jwt = require('jsonwebtoken');
 
 async function signup(req, res) {
   try {
-    const user = await userModel.create(req.body);
-    // // exp
+    const user = await userModel.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+      passwordConfirm: req.body.passwordConfirm,
+    });
     // const emailOptions = {};
     // emailOptions.html = `<h1>Welcome New User </h1> `;
     // emailOptions.to = email;
     // emailOptions.from = "customersupport@everyone.com";
     // emailOptions.subject = "Welcome" ;
     // await Email(emailOptions);
-
     res.status(201).json({
       status: 'user signed up',
       user,
