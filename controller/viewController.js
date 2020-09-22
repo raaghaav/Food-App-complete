@@ -3,7 +3,7 @@ const planModel = require('../model/planModel');
 const userModel = require('../model/userModel');
 
 async function getHomePage(req, res) {
-  let plans = await planModel.find();
+  let plans = await planModel.find() ;
   let name = req.userName ;
   res.render('home.pug', {
     plans,
