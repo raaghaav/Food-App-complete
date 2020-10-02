@@ -12,7 +12,7 @@ async function getHomePage(req, res) {
 }
 
 async function getPlansPage(req, res) {
-  let plans = await planModel.find(); // planModel =>get  plans
+  let plans = await planModel.find();  // planModel =>get  plans
   let name = req.userName;
   res.render('plansListing.pug', {
     title: 'Plans Page',
